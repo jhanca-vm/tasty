@@ -9,8 +9,8 @@ const About = () => (
 
     <section className="main-section">
       <div>
-        <span>About Us</span>
-        <h1>
+        <span className="small-title">About Us</span>
+        <h1 className="title">
           We cook the best <br /> tasty food
         </h1>
         <p>
@@ -34,18 +34,9 @@ const About = () => (
         padding: 1.2rem 0 3.6rem;
         text-align: center;
       }
-      span {
-        color: #069c54;
-        font-weight: 500;
-      }
-      h1 {
-        color: #393939;
-        font-size: 2.4rem;
-        margin: 0.8rem 0 1.6rem;
-      }
       p {
         line-height: 1.6;
-        margin-bottom: 2.4rem;
+        margin: 1.6rem 0 2.4rem;
       }
       figure {
         padding: 0 20px;
@@ -67,16 +58,7 @@ const About = () => (
           padding: 0 12px 0 0;
         }
         p {
-          margin: 0;
-        }
-      }
-      @media (min-width: 768px) {
-        h1 {
-          font-size: 3.6rem;
-        }
-        span,
-        p {
-          font-size: 1.6rem;
+          margin-bottom: 0;
         }
       }
       @media (min-width: 1024px) {

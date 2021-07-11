@@ -1,8 +1,8 @@
 import Layout from '../components/Layout'
 
-const MyApp = ({ Component, pageProps }) => (
+const MyApp = ({ Component, pageProps, router }) => (
   <>
-    <Layout>
+    <Layout route={router.route}>
       <Component {...pageProps} />
     </Layout>
 
@@ -23,14 +23,23 @@ const MyApp = ({ Component, pageProps }) => (
         background-color: #fbfefd;
         font-size: 1.5rem;
       }
-      h1 {
+      h1,
+      h2,
+      b {
         font-weight: 600;
+      }
+      h2,
+      b {
+        color: #393939;
       }
       input,
       button {
         background: none;
         border: none;
         color: inherit;
+      }
+      button {
+        cursor: pointer;
       }
       ul {
         list-style: none;
@@ -48,9 +57,26 @@ const MyApp = ({ Component, pageProps }) => (
         justify-content: center;
         min-height: calc(100vh - 4.8rem);
       }
+      .title {
+        color: #393939;
+        font-size: 2.4rem;
+        margin-top: 0.8rem;
+      }
+      .small-title {
+        color: #069c54;
+        font-weight: 500;
+      }
       @media (min-width: 540px) {
         .main-section {
           min-height: calc(100vh - 6rem);
+        }
+      }
+      @media (min-width: 768px) {
+        body {
+          font-size: 1.6rem;
+        }
+        .title {
+          font-size: 3.6rem;
         }
       }
     `}</style>
