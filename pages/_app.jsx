@@ -1,10 +1,8 @@
 import Layout from '../components/Layout'
 
 const MyApp = ({ Component, pageProps, router }) => (
-  <>
-    <Layout route={router.route}>
-      <Component {...pageProps} />
-    </Layout>
+  <Layout route={router.route}>
+    <Component {...pageProps} />
 
     <style jsx global>{`
       * {
@@ -80,7 +78,7 @@ const MyApp = ({ Component, pageProps, router }) => (
         }
       }
     `}</style>
-  </>
+  </Layout>
 )
 
 export default MyApp

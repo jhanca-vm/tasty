@@ -12,27 +12,25 @@ export default function Navbar() {
   }
 
   return (
-    <>
-      <header>
-        <nav onClick={hideMenu}>
-          <CustomLink href="/">Tasty</CustomLink>
-          <div>
-            <button onClick={() => setMenuIsVisible(false)}>
-              <i className="bx bx-x" />
-            </button>
-            <ul>
-              {links.map(link => (
-                <li key={link}>
-                  <CustomLink href={`/${link}`}>{link}</CustomLink>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <button onClick={() => setMenuIsVisible(true)}>
-            <i className="bx bx-menu" />
+    <header>
+      <nav onClick={hideMenu}>
+        <CustomLink href="/">Tasty</CustomLink>
+        <div>
+          <button onClick={() => setMenuIsVisible(false)}>
+            <i className="bx bx-x" />
           </button>
-        </nav>
-      </header>
+          <ul>
+            {links.map(link => (
+              <li key={link}>
+                <CustomLink href={`/${link}`}>{link}</CustomLink>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <button onClick={() => setMenuIsVisible(true)}>
+          <i className="bx bx-menu" />
+        </button>
+      </nav>
 
       <style jsx>{`
         header {
@@ -103,6 +101,6 @@ export default function Navbar() {
           }
         }
       `}</style>
-    </>
+    </header>
   )
 }
